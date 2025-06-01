@@ -448,4 +448,8 @@
     .arrow-icon {
     transform:scale(0.8);    
   }
+
+  .logo {
+    margin: 0 !important;
+  }
 }
