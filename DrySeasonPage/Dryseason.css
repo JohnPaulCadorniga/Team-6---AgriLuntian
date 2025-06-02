@@ -9,9 +9,11 @@ body {
     min-height: 100vh;
 }
 
+
+
 .hero {
     width: 100%; /* Take full width */
-    height: 30vh; /* Set a fixed height for the hero section */
+    height: 45vh; /* Set a fixed height for the hero section */
     overflow: hidden; /* Hide any overflow of the image */
     margin-bottom: 30px; /* Space between hero and content below */
     display: flex; /* Use flexbox to center the image */
@@ -41,18 +43,22 @@ body {
 
 .header h1 {
     font-size: 2em;
-    color: #333;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    color: #224844;
     margin: 0;
 }
-
 .search-bar {
     display: flex;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 20px;
     overflow: hidden;
     padding: 5px 10px;
     background-color: #fff;
     width: 250px; /* Adjust width as needed */
+    flex-direction: row-reverse; /* This reverses the order of items */
 }
 
 .search-bar input {
@@ -61,6 +67,7 @@ body {
     flex-grow: 1;
     padding: 5px;
     font-size: 1em;
+    text-align: left; /* Align text to the right if you want it to start after the icon */
 }
 
 .search-bar button {
@@ -69,12 +76,12 @@ body {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-image: url('./search.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-left: 0.5px; /* Add some spacing between the icon and input */
 }
-
 .crops-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
@@ -87,30 +94,27 @@ body {
 }
 
 .crop-item {
-    background-color: #EEF1E3;
+    background-color: #224844;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    /* Removed text-align: center; from here */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    /* Removed align-items: center; from here */
     padding-bottom: 15px;
 }
 
 .crop-item img {
-    /* Adjusted width to allow for horizontal padding */
-    width: 28.5vw;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
-    margin-left: 15px; /* Added left margin */
-    margin-right: 15px; /* Added right margin */
-    margin-top: 15px; /* Added top margin */
-}
+        width: calc(100% - 30px); /* Account for the grid padding on left and right */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        border-radius: 5px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+        margin-left: 15px; /* Align with the grid padding */
+        margin-right: 15px; /* Align with the grid padding */
+        margin-top: 15px; /* Apply top padding */
+    }
 
 .crop-item p {
     margin: 0;
@@ -123,9 +127,13 @@ body {
 }
 
 .crop-item p a {
-    color: #555;
+    color: #FFFFFF;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     text-decoration: none;
 }
+
 
 .crop-item p a:hover {
     text-decoration: underline; /* Add underline on hover */
@@ -141,9 +149,10 @@ body {
 }
 
 /* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     .hero {
-        height: 200px; /* Adjust hero height for smaller screens */
+        height: 25r0px; /* Adjust hero height for smaller screens */
     }
 
     .header {
@@ -153,27 +162,26 @@ body {
     }
 
     .search-bar {
-        width: 100%;
+        width: calc(100% - 30px);
         margin-top: 15px;
     }
 
     .crops-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        padding: 0 15px;
+        padding: 15px; /* Padding around the grid items */
     }
-    
-   
+
+    .crop-item img {
+        width: calc(100% - 30px); /* Account for the grid padding on left and right */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        border-radius: 5px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+        margin-left: 15px; /* Align with the grid padding */
+        margin-right: 15px; /* Align with the grid padding */
+        margin-top: 15px; /* Apply top padding */
+    }
 }
 
-@media (max-width: 580px) {
-    .hero {
-        height: 150px; /* Further adjust hero height for very small screens */
-    }
-    .crops-grid {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-    }
-    .header {
-        padding: 0 10px;
-    }
-}
+
