@@ -1,0 +1,69 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5vh 5vw;
+    }
+    
+    .main-title {
+      color:#333;
+      font-family: "Poppins", sans-serif;
+      font-size: 4rem;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+      margin: 0;
+    }
+
+    .eggplant_header {
+      height: 45vh;
+      width: 100%;
+    }
+
+    .info-box {
+      width: 75vw;
+      height: 65vh;
+      background-color: #EEF1E3;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+    }
+    .info-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 10vh;
+    }
+    .left-paragraph{
+      width: 49.3%;
+      margin: 2.5vw;
+    }
+
+    .right-paragraph{
+      width: 45%;
+      margin: 2.5vw 2vw 2.5vw 0;
+    }
+    .info-box p {
+      font-size: 1.3rem;
+      color: #555;
+      line-height: 1.6;
+      text-align: left;
+    }
+    .back-button a{
+      color:#333;
+      font-size: 1.2rem;
+    }
+
+    .back-button{
+      margin-bottom: 8vh;
+    }
