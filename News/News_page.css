@@ -197,7 +197,7 @@ body, html {
 }
 .more-news {
   font-family: "Poppins", sans-serif;
-  font-weight: 1000;
+  font-weight: 700;
   position: absolute;
   bottom: clamp(20px, 7vh, 450px); /* Responsive vertical spacing */
   left: 82%;

@@ -1,0 +1,76 @@
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background-color: #EEF1E3;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      width: 42vw;
+      height: 48vh;
+      position: relative;
+    }
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal h2 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      text-align: center;
+      color: #2e5a48;
+    }
+    .application-options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3vw;
+      margin-top: 1rem;
+    }
+    .card {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+      background-color: #204d44;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 30%;
+      height: 35vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      display: flex;
+      text-decoration: none;
+      flex-direction: column;
+    }
+    .card img {
+      height: 12vh;
+      margin-bottom: 1.5rem;
+    }

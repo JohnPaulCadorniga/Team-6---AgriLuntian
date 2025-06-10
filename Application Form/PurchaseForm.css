@@ -1,0 +1,627 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #C2D18E;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transform: scale(0.7);
+}
+
+/* Header and Logo */
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.form-header .logo-img {
+    width: 60px;
+    height: auto;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+.form-header h1 {
+    color: #AED22B;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+/* Back Link */
+.back-link {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: #888;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+.back-link:hover {
+    color: #92b921;
+}
+
+/* PROGRESS BAR STYLES */
+.progress-bar-container {
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    cursor: default;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.3em;
+    border: 3px solid #e0e0e0;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    display: block;
+}
+
+.check-icon {
+    display: none;
+    color: #fff;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.step.active .step-circle {
+    background-color: #AED22B;
+    border-color: #AED22B;
+    color: #fff;
+}
+
+.step.completed .step-circle {
+    background-color: #AED22B;
+    border-color: #AED22B;
+    color: #fff;
+}
+
+.step.completed .step-number {
+    display: none;
+}
+
+.step.completed .check-icon {
+    display: block;
+}
+
+.step-label {
+    margin-top: 12px;
+    color: #888;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.step.active .step-label {
+    color: #AED22B;
+    font-weight: 600;
+}
+
+.step.completed .step-label {
+    color: #AED22B;
+    font-weight: 600;
+}
+
+/* Progress Line */
+.progress-line {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 0;
+    border-radius: 2.5px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #AED22B;
+    transition: width 0.3s ease-in-out;
+    border-radius: 2.5px;
+}
+
+/* Product Toggle */
+.product-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product-toggle-btn {
+    padding: 12px 25px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #666;
+    flex: 1;
+    max-width: 200px;
+}
+
+.product-toggle-btn.active {
+    background-color: #AED22B;
+    color: white;
+}
+
+.product-toggle-btn:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.product-toggle-btn:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.product-selection {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.product-selection.active {
+    display: block;
+}
+
+/* Payment Method Toggle */
+.payment-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-toggle-btn {
+    padding: 12px 25px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #666;
+    flex: 1;
+    max-width: 200px;
+}
+
+.payment-toggle-btn.active {
+    background-color: #AED22B;
+    color: white;
+}
+
+.payment-toggle-btn:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.payment-toggle-btn:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.payment-method {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.payment-method.active {
+    display: block;
+}
+
+/* QR Code Container */
+.qr-code-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.qr-code-container h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.qr-code-img {
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.qr-code-container p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.payment-instructions {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.payment-instructions h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.payment-instructions ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.payment-instructions li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* FORM FIELD STYLES */
+.form-content {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+}
+
+.form-content h2 {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.form-group input:not([type="radio"]), .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+}
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+#totalPrice {
+    background-color: #e9e9e9;
+    font-weight: 600;
+    color: #333;
+}
+
+/* File Upload (Drag and Drop) */
+.file-upload {
+    border: 2px dashed #d0d0d0;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    color: #888;
+    font-size: 0.95em;
+    font-weight: 500;
+    background-color: #fafafa;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.file-upload:hover,
+.file-upload.dragover {
+    border-color: #AED22B;
+    background-color: #f5fdee;
+}
+.file-upload-placeholder {
+    color: #888;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.file-upload::before {
+    content: "\f093";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    font-size: 2em;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.file-upload.file-selected {
+    border-color: #4A7C4B;
+    background-color: #e6f7e6;
+}
+.file-upload.file-selected .file-upload-placeholder {
+    color: #4A7C4B;
+    text-decoration: none;
+}
+.file-upload.file-selected::before {
+    content: "\f058";
+    color: #4A7C4B;
+}
+
+/* Buttons */
+.form-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-next {
+    background-color: #AED22B;
+    color: white;
+}
+.btn-next:hover {
+    background-color: #92b921;
+    box-shadow: 0 6px 15px rgba(174, 210, 43, 0.3);
+}
+
+.btn-submit {
+    background-color: #4A7C4B;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(74, 124, 75, 0.2);
+}
+.btn-submit:hover {
+    background-color: #3f6a40;
+    box-shadow: 0 6px 15px rgba(74, 124, 75, 0.3);
+}
+
+/* Success Message Styles */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.success-message .success-icon {
+    font-size: 5em;
+    color: #AED22B;
+    margin-bottom: 20px;
+}
+
+.success-message h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+.success-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.success-actions .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: 500;
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.success-actions .btn-primary {
+    background-color: #AED22B;
+    color: white;
+    box-shadow: 0 4px 10px rgba(174, 210, 43, 0.2);
+}
+.success-actions .btn-primary:hover {
+    background-color: #92b921;
+    box-shadow: 0 6px 15px rgba(174, 210, 43, 0.3);
+}
+
+.success-actions .btn-secondary {
+    background-color: #e0e0e0;
+    color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.success-actions .btn-secondary:hover {
+    background-color: #d0d0d0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for product and payment method transition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+        transform: scale(1);
+    }
+    .back-link {
+        top: 30px;
+        left: 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-row-three-cols .form-group,
+    .form-row-two-cols .form-group {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .progress-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .step {
+        flex: none;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    .progress-line {
+        display: none;
+    }
+    .form-footer {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+    .btn-next, .btn-submit {
+        width: 100%;
+    }
+    .success-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .success-actions .btn {
+        min-width: 100%;
+    }
+    .product-toggle-btn,
+    .payment-toggle-btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .qr-code-img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-header h1 {
+        font-size: 1.5em;
+    }
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+    .step-label {
+        font-size: 0.8em;
+    }
+    .file-upload {
+        padding: 20px;
+    }
+    .success-message h2 {
+        font-size: 1.5em;
+    }
+    .success-message p {
+        font-size: 0.9em;
+    }
+    .product-toggle,
+    .payment-toggle {
+        flex-direction: column;
+    }
+    .product-toggle-btn,
+    .payment-toggle-btn {
+        max-width: 100%;
+        border-radius: 5px !important;
+        margin-bottom: 5px;
+    }
+    .qr-code-container {
+        padding: 15px;
+    }
+}

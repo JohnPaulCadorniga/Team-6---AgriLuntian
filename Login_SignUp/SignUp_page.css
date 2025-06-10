@@ -9,6 +9,15 @@ body {
       height: 100vh;
     }
 
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
     .signup-container {
       position: relative;
       background-color: white;

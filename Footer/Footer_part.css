@@ -30,11 +30,11 @@ footer {
   .footer-b2 a, .footer-b3 a{
     text-decoration: none;
     color: white;
-    font-weight: 20;
+    font-weight: 300;
   }
   
   .follow-us {
-    font-size: 0.9rem;
+    font-size: 0.99rem;
     color: white;
     font-weight: 800;	
     margin-bottom: 3vh;	
@@ -56,7 +56,7 @@ footer {
   .sign-up {
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
-    font-weight: 1000;
+    font-weight: 600;
     text-align: center;
     border: 1px solid black;
     border-radius: 12px;

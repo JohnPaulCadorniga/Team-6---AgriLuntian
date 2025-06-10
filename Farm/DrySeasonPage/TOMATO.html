@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     
+  <title>Tomato | AgriLuntian</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="../../Farm/crops_page.css" rel="stylesheet">
+  <link href="../../HomePage/navbar.css" rel="stylesheet">
+  <link href="../../Footer/Footer_part.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../../Application Form/application_modal.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+    <a href = "./../../index.html#start">
+    <img src="../../HomePage/AgriLuntian_logo.png" alt="Logo">
+    </a>
+    </div>
+    
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <nav class="nav-links">
+        <div class="dropdown">
+            <button class="dropdown-btn" aria-expanded="false">
+            <a href="./../../Farm/Farm.html">FARMING</a>
+            <img src="../../HomePage/dropdown.png" alt="dropdown" class="dropdown-icon">
+            </button> 
+             <ul class="dropdown-menu">
+              <li><a href="../../Farm/DrySeasonPage/Dryseason.html">Dry Season Crops</a></li>
+              <li><a href="../../Farm/WetSeasonPage/Wetseason.html">Wet Season Crops</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-btn" aria-expanded="false">
+              LIVESTOCK
+              <img src="../../HomePage/dropdown.png" alt="dropdown" class="dropdown-icon">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="../../Livestocks Poultry/poultry.html">Poultry Farming</a></li>
+              <li><a href="../../Livestocks Piggery/piggery.html">Piggery Farming</a></li>
+              <li><a href="../../Livestocks Cattle/cattle.html">Cattle Farming</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-btn" aria-expanded="false">
+              SERVICES
+              <img src="../../HomePage/dropdown.png" alt="dropdown" class="dropdown-icon">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="../../Application Form/LoanForm.html">Loans</a></li>
+              <li><a href="../../Application Form/PurchaseForm.html">Purchase</a></li>
+            </ul>
+          </div>
+
+      <a href="./../../index.html#news_part">NEWS</a>
+      <a href = "../../Login_SignUp/Login.html"><button class="login-btn">LOGIN</button> </a>
+    </nav>
+  </header>
+
+  <img src = "./(page-header) tomato.png" class = "page_header" alt = "Tomato-Background">
+
+<div class = "container">
+  <div class = "content">
+  <h1 class="main-title">TOMATO</h1>
+    <div class="info-box">
+    <div class="info-content">
+      <p class="left-paragraph">
+        <b class="info-label">Description:</b> Tomato is rich in nutrients like vitamins A and C, 
+        fiber, and antioxidants like lycopene. It boosts skin health, 
+        purifies blood, and may help with gout, high blood pressure, and 
+        sinus issues. Plus, it is known as a natural antiseptic, tomatoes 
+        also promote healthy skin, purify the blood.
+      <br> <br>
+      <b class="info-label">Spacing:</b> 60 to 90 cm between plants; 90 to 120 cm between rows.
+      <br>
+      <br>
+      <b class="info-label">Best Soil Type/Condition:</b> Thrive best in sandy loam and clay 
+      loam textured soils with pH value ranging from 6.2 to 6.8.
+      </p>
+      <p class="right-paragraph">
+      <b class="info-label">Growth Time:</b> 65 to 80 days from transplanting to harvest. 
+      100 to 120 days from seed to harvest.
+      <br><br>
+      <b class="info-label">Water Rate:</b> 2.5 to 5 cm depth of water per week.<br>
+      <br>
+      <b class="info-label">Fertilization:</b> Pre-planting fertilization incorporates 2 to 3 
+      pounds of complete fertilizer per 100 square meters into 
+      the soil. Post-planting requires side-dress nitrogen-rich 
+      fertilizer at 4 and 8 weeks after planting.
+      </p>
+    </div>
+    </div><br>
+</div>
+</div>
+
+ <section class="prices">
+    <h2>Current Tomato Prices in the Philippines</h2><br>
+    <p>Updated pricing for smarter farming</p>
+      <div class="price-card">
+        <img src="./prices_tomato.png" alt="Tomato">
+        <p><strong>₱ 70.75 /kg</strong></p>
+      </div>
+    </div>
+    <p class="note">Prices vary by region. Source: PSA Region III Central Luzon as of June 6, 2025</p>
+  </section>
+
+  
+  <p class="back-button">
+    <a href="../../Farm/DrySeasonPage/Dryseason.html">BACK</a>
+  </p>
+
+  <div class="cta">
+    <div class="cta-content">
+      <p>Ready to Grow? Start Your Loan <br>Application Now</p>
+      <button id="start_application" class = "open_start_application">START APPLICATION</button>
+    </div>
+  </div>
+
+<div class="overlay" id="modalOverlay">
+  <div class="modal">
+    <span class="close-button" id="closeModal">&times;</span>
+    <h2>Choose Application Type</h2>
+    <div class="application-options">
+      <a href="../../Application Form/LoanForm.html" class="card">
+        <img src="../../Application Form/loan-modal.png" alt="Loan Icon">
+        <div>Loan Application</div>
+      </a>
+      <a href="../../Application Form/LoanForm.html" class = "card">
+        <img src="../../Application Form/payment-modal.png" alt="Purchase Icon">
+        <div class = "card_text">Purchase Application</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class = "footer-container">
+	<div class = "footer-b1">
+		<img src = "../../Footer/Footer_AgriLuntian_logo.png" class = "logo">
+		<p><b>
+		Agriculture Made Easy, <br> 	
+		Together with Farmers. </b><br>
+		by <span style = "color: #AED22B">AgriLuntian</span><br>
+		</p>
+	</div>
+	<div class = "footer-b2">
+		<p><b>MENU</b></p>
+		<ul class = "footer-link">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Farming</a></li>
+			<li><a href="#">Livestock</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">News</a></li>
+		</ul>
+	</div>
+	<div class = "footer-b3">
+		<p><b>MORE</b></p>
+		<ul class = "footer-link">
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">FAQs</a></li>
+		</ul>
+	</div>
+	<div class = "footer-b4">
+		<button class = "sign-up"><a href = "../../Login_SignUp/SignUp.html">SIGN UP</a></button>
+		<p class = "follow-us">FOLLOW US AT</p>
+			<div class = "soc">
+				<img src = "../../Footer/tiktok_icon.png" class = "soc-icon">
+				<img src = "../../Footer/insta_icon.png" class = "soc-icon">			
+				<img src = "../../Footer/fb_icon.png" class = "soc-icon">
+			</div>
+	</div>
+  </div> <br>
+    <hr> <br>
+  <div class = "footer-end">
+    <p>© 2025 All Rights Reserved. AgriLuntian.</p>
+    <p>Terms of Services and Privacy Policy</p>
+  </div>
+  </footer>
+
+  <script src = "../../Application Form/pop_up.js"></script>
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+
+
+  <script src="../../HomePage/dropdown.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

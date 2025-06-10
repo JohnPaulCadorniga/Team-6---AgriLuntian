@@ -1,10 +1,27 @@
 /* General Reset */
-body {
-  font-family: "Poppins", sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
   color: #224844;
 }
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  body.fade-in {
+    opacity: 1;
+  }
+   
 /* Header Image */
 .header-image img {
   width: 100%;
@@ -17,19 +34,8 @@ section {
   text-align: center;
 }
 
-h2 {
-  font-family: "Unbounded", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: #224844;
-}
-
-p {
-  font-size: 16px;
-  font-weight: 200;
-}
-
-button {
+.cta-content button,
+.text button {
   background-color: #224844;
   color: white;
   padding: 10px 20px;
@@ -39,13 +45,14 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+.cta-content button:hover,
+.text button:hover {
   background-color: #2e5b4c;
 }
 
 /* Hero Section */
 .hero {
-  background-color: #f7faf7;
+  background-color: #ffffff;
 }
 
 .hero-content .text button {
@@ -65,8 +72,21 @@ button:hover {
 }
 
 .hero-content .text {
-  max-width: 400px;
+  max-width: 470px;
   text-align: left;
+}
+
+.hero-content .text h2 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #224844;
+}
+
+.hero-content .text p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 200;
 }
 
 .hero-content .text h2,
@@ -75,7 +95,7 @@ button:hover {
 }
 
 .hero-content img {
-  width: 400px;
+  width: 450px;
   height: auto;
   border-radius: 10px;
 }
@@ -101,9 +121,9 @@ gap: 30px;
 margin-top: 20px;
 }
 
-.card {
+.lcard {
   background-color: #224844;
-  color: #fff;
+  color: #ffffff;
   border-radius: 8px;
   padding: 20px;
   flex: 1;
@@ -115,7 +135,7 @@ margin-top: 20px;
   align-items: center;
 }
 
-.card h3 {
+.lcard h3 {
   font-family: "Unbounded", sans-serif;
   margin-bottom: 10px;
   margin-top: 2px;
@@ -124,7 +144,7 @@ margin-top: 20px;
   position: relative;
 }
 
-.card h3::after {
+.lcard h3::after {
   content: "";
   display: block;
   height: 2px;
@@ -133,7 +153,7 @@ margin-top: 20px;
   width: 100%;
 }
 
-.card ul {
+.lcard ul {
   list-style: none;
   padding: 0;
   margin-top: 15px;
@@ -142,22 +162,19 @@ margin-top: 20px;
 }
 
 
-.card li {
+.lcard li {
 margin-bottom: 15px;
 line-height: 1.6;
 font-size: 16px;
 }
 
-.card li strong {
+.lcard li strong {
 font-weight: 600;
 }
 
-
-
-
 /* Prices Section */
 .prices {
-  background-color: #f0f5f2;
+  background-color: #FFFFFF;
 }
 
 .price-cards {
@@ -183,8 +200,8 @@ font-weight: 600;
 }
 
 /* Footer CTA */
-footer.cta {
-  background-color: #e1edc7;
+.cta {
+  background-color: #E3E8A4;
   padding: 30px 20px;
 }
 
@@ -200,9 +217,9 @@ footer.cta {
 .cta-content p {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.8;
-  margin: 0;
+  color: #224844;
 }
 
 .cta-content button {
@@ -214,4 +231,5 @@ footer.cta {
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  margin-left: 10vw;
 }

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./PurchaseForm.css">
+    <link rel="stylesheet" href="./HomePage/Homepage_css.css">
+    <title>Purchase Form | AgriLuntian</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <a href="#" class="back-link" id="backLink" style="display: none;">BACK</a>
+
+        <div class="form-header">
+            <a href="../index.html">
+            <img src="../HomePage/AgriLuntian_logo.png" alt="Company Logo" class="logo-img">
+            </a>
+            <h1>AGRILUNTIAN PURCHASE FORM</h1>
+        </div>
+
+        <div class="progress-bar-container">
+            <ul class="progress-steps">
+                <li class="step" data-step="1">
+                    <div class="step-circle">
+                        <span class="step-number">1</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </div>
+                    <span class="step-label">Select Products</span>
+                </li>
+                <li class="step" data-step="2">
+                    <div class="step-circle">
+                        <span class="step-number">2</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </div>
+                    <span class="step-label">Payment Details</span>
+                </li>
+                <li class="step" data-step="3">
+                    <div class="step-circle">
+                        <span class="step-number">3</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </div>
+                    <span class="step-label">Upload Documents</span>
+                </li>
+            </ul>
+            <div class="progress-line">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="form-content">
+                <div class="step-content active" data-step="1">
+        <div class="product-toggle">
+            <button class="product-toggle-btn active" data-product="crop">Crop Seeds</button>
+            <button class="product-toggle-btn" data-product="livestock">Livestock</button>
+        </div>
+        
+        <div class="product-selection active" id="crop-selection">
+            <div class="form-group">
+                <label for="cropSeed">SELECT CROP SEED</label>
+                <select id="cropSeed" name="cropSeed">
+                    <option value="">Select a seed</option>
+                    <option value="eggplant-120">Eggplant (₱120/pack)</option>
+                    <option value="tomato-150">Tomato (₱150/pack)</option>
+                    <option value="red-onion-200">Red Onion (₱200/kg)</option>
+                    <option value="banana-80">Banana (₱80/plant)</option>
+                    <option value="oranges-250">Oranges (₱250/plant)</option>
+                    <option value="rice-50">Rice (₱50/kg)</option>
+                    <option value="string-beans-100">String Beans (₱100/pack)</option>
+                    <option value="gabi-180">Gabi (₱180/kg)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">QUANTITY</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+        </div>
+                
+                <div class="product-selection" id="livestock-selection">
+                    <div class="form-group">
+                        <label for="livestockType">SELECT LIVESTOCK</label>
+                        <select id="livestockType" name="livestockType">
+                            <option value="">Select livestock</option>
+                            <option value="egg-10">Eggs (₱10/piece)</option>
+                            <option value="chicken-300">Chicken (₱300 each)</option>
+                            <option value="pig-5000">Pig (₱5,000 each)</option>
+                            <option value="cow-30000">Cow (₱30,000 each)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="livestockQuantity">QUANTITY</label>
+                        <input type="number" id="livestockQuantity" name="livestockQuantity" min="1" value="1">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="totalPrice">TOTAL PRICE</label>
+                    <input type="text" id="totalPrice" name="totalPrice" value="₱0.00" readonly>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="btn btn-next">NEXT</button>
+                </div>
+            </div>
+
+            <div class="step-content" data-step="2">
+                <div class="payment-toggle">
+                    <button class="payment-toggle-btn active" data-method="gcash">GCash</button>
+                    <button class="payment-toggle-btn" data-method="bank">Bank Transfer</button>
+                </div>
+                
+                <div class="payment-method active" id="gcash-payment">
+                    <div class="qr-code-container">
+                        <h3>Scan to Pay via GCash</h3>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=GCashNumber:09171234567" alt="GCash QR Code" class="qr-code-img">
+                        <p>GCash Number: <strong>09171234567</strong></p>
+                        <p>Account Name: <strong>AgriLuntian Trading Corp.</strong></p>
+                        
+                        <div class="payment-instructions">
+                            <h4>Payment Instructions:</h4>
+                            <ol>
+                                <li>Open your GCash app</li>
+                                <li>Tap "Scan QR" and scan the code above</li>
+                                <li>Enter the exact amount shown in your order</li>
+                                <li>Add your order number as reference</li>
+                                <li>Complete the payment</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-method" id="bank-payment">
+                    <div class="form-group">
+                        <label for="bankName">BANK NAME</label>
+                        <input type="text" id="bankName" name="bankName" placeholder="e.g., BDO, BPI, Metrobank" value="BDO">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountName">ACCOUNT NAME</label>
+                        <input type="text" id="accountName" name="accountName" placeholder="e.g., AgriLuntian Trading Corp." value="AgriLuntian Trading Corp.">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountNumber">ACCOUNT NUMBER</label>
+                        <input type="text" id="accountNumber" name="accountNumber" placeholder="e.g., 001234567890" value="001234567890">
+                    </div>
+                    
+                    <div class="payment-instructions">
+                        <h4>Bank Transfer Instructions:</h4>
+                        <ol>
+                            <li>Log in to your online banking</li>
+                            <li>Go to "Send Money" or "Transfer"</li>
+                            <li>Enter the bank details shown above</li>
+                            <li>Input the exact amount from your order</li>
+                            <li>Use your order number as reference</li>
+                            <li>Complete the transaction</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="button" class="btn btn-next">NEXT</button>
+                </div>
+            </div>
+
+            <div class="step-content" data-step="3">
+                <div class="form-group">
+                    <label>PROOF OF PAYMENT</label>
+                    <div class="file-upload" id="proofOfPaymentUpload">
+                        <span class="file-upload-placeholder">DRAG OR DROP FILES HERE</span>
+                        <input type="file" id="proofOfPaymentInput" name="proofOfPaymentInput" accept=".pdf,.jpg,.png" style="display: none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>VALID ID</label>
+                    <div class="file-upload" id="idUpload">
+                        <span class="file-upload-placeholder">DRAG OR DROP FILES HERE</span>
+                        <input type="file" id="idInput" name="idInput" accept=".pdf,.jpg,.png" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-submit">SUBMIT PURCHASE</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" style="display: none;">
+            <i class="fas fa-check-circle success-icon"></i> <h2>Purchase Submitted Successfully!</h2>
+            <p>Thank you for your purchase. We will process your order shortly.</p>
+            <p>For any inquiries, please contact us.</p>
+            <div class="success-actions">
+                <button type="button" class="btn btn-secondary" id="submitAnotherBtn">MAKE ANOTHER PURCHASE</button>
+                <a href="../index.html"><button type="button" class="btn btn-primary" id="goHomeBtn">GO BACK TO HOME PAGE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.progress-steps .step');
+            const stepContents = document.querySelectorAll('.form-content .step-content');
+            const nextButtons = document.querySelectorAll('.btn-next');
+            const progressFill = document.querySelector('.progress-fill');
+            const backLink = document.getElementById('backLink');
+
+            const formContent = document.querySelector('.form-content');
+            const successMessage = document.querySelector('.success-message');
+            const progressBarContainer = document.querySelector('.progress-bar-container');
+
+            const submitAnotherBtn = document.getElementById('submitAnotherBtn');
+            const goHomeBtn = document.getElementById('goHomeBtn');
+
+            let currentStepIndex = 0;
+
+            function updateProgressBar() {
+                steps.forEach((step, index) => {
+                    step.classList.remove('active', 'completed');
+                    if (index < currentStepIndex) {
+                        step.classList.add('completed');
+                    } else if (index === currentStepIndex) {
+                        step.classList.add('active');
+                    }
+                });
+
+                stepContents.forEach((content, index) => {
+                    if (index === currentStepIndex) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+
+                const percentage = (currentStepIndex / (steps.length - 1)) * 100;
+                progressFill.style.width = `${percentage}%`;
+
+                if (currentStepIndex > 0) {
+                    backLink.style.display = 'block';
+                } else {
+                    backLink.style.display = 'none';
+                }
+            }
+
+            function resetFormFields() {
+                formContent.querySelectorAll('input, select, textarea').forEach(field => {
+                    if (field.type === 'checkbox' || field.type === 'radio') {
+                        field.checked = false;
+                    } else if (field.tagName === 'SELECT') {
+                        field.selectedIndex = 0;
+                    } else {
+                        field.value = '';
+                    }
+                });
+
+                document.querySelectorAll('.file-upload .file-upload-placeholder').forEach(span => {
+                    span.textContent = 'DRAG OR DROP FILES HERE';
+                });
+
+                document.getElementById('totalPrice').value = '₱0.00';
+            }
+
+            updateProgressBar();
+
+            nextButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (currentStepIndex < steps.length - 1) {
+                        currentStepIndex++;
+                        updateProgressBar();
+                    }
+                });
+            });
+
+            backLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (currentStepIndex > 0) {
+                    currentStepIndex--;
+                    updateProgressBar();
+                }
+            });
+
+            const submitButton = document.querySelector('.btn-submit');
+            if (submitButton) {
+                submitButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    formContent.style.display = 'none';
+                    progressBarContainer.style.display = 'none';
+                    backLink.style.display = 'none';
+
+                    successMessage.style.display = 'flex';
+                });
+            }
+
+            if (submitAnotherBtn) {
+                submitAnotherBtn.addEventListener('click', () => {
+                    successMessage.style.display = 'none';
+                    formContent.style.display = 'block';
+                    progressBarContainer.style.display = 'block';
+
+                    currentStepIndex = 0;
+                    resetFormFields();
+                    updateProgressBar();
+                });
+            }
+
+            if (goHomeBtn) {
+                goHomeBtn.addEventListener('click', () => {
+                    window.location.href = '../index.html'; 
+                });
+            }
+
+            document.querySelectorAll('.file-upload').forEach(uploadDiv => {
+                const input = uploadDiv.querySelector('input[type="file"]');
+                const placeholderSpan = uploadDiv.querySelector('.file-upload-placeholder');
+
+                uploadDiv.addEventListener('click', () => input.click());
+
+                input.addEventListener('change', () => {
+                    if (input.files.length > 0) {
+                        placeholderSpan.textContent = `File selected: ${input.files[0].name}`;
+                        uploadDiv.classList.add('file-selected');
+                    } else {
+                        placeholderSpan.textContent = `DRAG OR DROP FILES HERE`;
+                        uploadDiv.classList.remove('file-selected');
+                    }
+                });
+
+                uploadDiv.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    uploadDiv.classList.add('dragover');
+                });
+
+                uploadDiv.addEventListener('dragleave', () => {
+                    uploadDiv.classList.remove('dragover');
+                });
+
+                uploadDiv.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    uploadDiv.classList.remove('dragover');
+                    if (e.dataTransfer.files.length > 0) {
+                        input.files = e.dataTransfer.files;
+                        placeholderSpan.textContent = `File selected: ${input.files[0].name}`;
+                        uploadDiv.classList.add('file-selected');
+                    }
+                });
+            });
+
+            // Product toggle functionality
+            const productToggleButtons = document.querySelectorAll('.product-toggle-btn');
+            const productSelections = document.querySelectorAll('.product-selection');
+            
+            productToggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and selections
+                    productToggleButtons.forEach(btn => btn.classList.remove('active'));
+                    productSelections.forEach(selection => selection.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding selection
+                    button.classList.add('active');
+                    const productId = `${button.dataset.product}-selection`;
+                    document.getElementById(productId).classList.add('active');
+                    
+                    // Reset calculation
+                    calculateTotalPrice();
+                });
+            });
+
+            // Purchase calculation logic
+            const cropSeedSelect = document.getElementById('cropSeed');
+            const quantityInput = document.getElementById('quantity');
+            const livestockTypeSelect = document.getElementById('livestockType');
+            const livestockQuantityInput = document.getElementById('livestockQuantity');
+            const totalPriceInput = document.getElementById('totalPrice');
+
+            const seedPrices = {
+                "eggplant-120": 120,
+                "tomato-150": 150,
+                "red-onion-200": 200,
+                "banana-80": 80,
+                "oranges-250": 250,
+                "rice-50": 50,
+                "string-beans-100": 100,
+                "gabi-180": 180
+            };
+
+            const livestockPrices = {
+                "egg-10": 10,
+                "chicken-300": 300,
+                "pig-5000": 5000,
+                "cow-30000": 30000
+            };
+
+            function calculateTotalPrice() {
+                const activeProduct = document.querySelector('.product-toggle-btn.active').dataset.product;
+                let total = 0;
+
+                if (activeProduct === 'crop') {
+                    const selectedSeed = cropSeedSelect.value;
+                    const quantity = parseInt(quantityInput.value);
+
+                    if (selectedSeed && quantity > 0) {
+                        const price = seedPrices[selectedSeed];
+                        if (price) {
+                            total = price * quantity;
+                        }
+                    }
+                } else if (activeProduct === 'livestock') {
+                    const selectedLivestock = livestockTypeSelect.value;
+                    const quantity = parseInt(livestockQuantityInput.value);
+
+                    if (selectedLivestock && quantity > 0) {
+                        const price = livestockPrices[selectedLivestock];
+                        if (price) {
+                            total = price * quantity;
+                        }
+                    }
+                }
+
+                totalPriceInput.value = total > 0 ? `₱${total.toLocaleString('en-PH')}` : '₱0.00';
+            }
+
+            // Event listeners for all input changes
+            cropSeedSelect.addEventListener('change', calculateTotalPrice);
+            quantityInput.addEventListener('input', calculateTotalPrice);
+            livestockTypeSelect.addEventListener('change', calculateTotalPrice);
+            livestockQuantityInput.addEventListener('input', calculateTotalPrice);
+
+            // Initial calculation on load
+            calculateTotalPrice();
+            
+            // Payment method toggle
+            const paymentToggleButtons = document.querySelectorAll('.payment-toggle-btn');
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            
+            paymentToggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    paymentToggleButtons.forEach(btn => btn.classList.remove('active'));
+                    paymentMethods.forEach(method => method.classList.remove('active'));
+                    
+                    button.classList.add('active');
+                    const methodId = `${button.dataset.method}-payment`;
+                    document.getElementById(methodId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

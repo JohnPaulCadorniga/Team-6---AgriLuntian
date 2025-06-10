@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stacks title and info-box */
+  align-items: center;
+  justify-content: center;
+  margin: 5vh 5vw;
+}
+
+.main-title {
+  color: #224844;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.page_header {
+  height: 45vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.info-box {
+  width: 75vw;
+  background-color: #EEF1E3;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: #224844;
+  font-family: Arial, sans-serif;
+  padding: 2.5vw;
+  overflow: hidden;
+}
+
+.info-label {
+  font-size: 1.1rem;
+  line-height: 2;
+  font-family: 'Poppins', sans-serif;
+  color: #224844;
+  margin-bottom: 20px;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+  flex-wrap: wrap; /* Allows paragraphs to wrap on smaller screens initially */
+}
+
+.left-paragraph,
+.right-paragraph {
+  flex: 1;
+  min-width: 300px; /* On larger screens, ensure paragraphs don't get too narrow */
+  margin: 0;
+}
+
+.info-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.back-button {
+  text-align: left;
+  margin-left: 1vw; /* Aligns with paragraph text on larger screens */
+}
+
+.back-button a {
+  display: inline-block;
+  margin-left: 15vw;
+  margin-top: 5vh;
+  margin-bottom: 8vh;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+/*Prices*/
+.prices {
+  background-color: white;
+  text-align: center;
+}
+
+.prices h2 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #224844;
+}
+
+.prices p{
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #224844;
+}
+
+.price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.price-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-top: 12vh;
+}
+
+.note {
+  font-size: 12px;
+  margin-top: 12vh;
+  color: #555;
+}
+
+/* Footer CTA */
+.cta {
+  background-color: #E3E8A4;
+  padding: 30px 20px;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cta-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #224844;
+}
+
+.cta-content button {
+  background-color: #224844;
+  color: #fff;
+  padding: 10px 34px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10vw;
+}
+
+
+/* --- Responsive Styles for Screens up to 768px --- */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+
+ .page_header {
+  height: 30vh; /* or try 25vh */
+  width: 100%;
+  object-fit: cover;
+  object-position: center left; /* You can adjust focus */
+}
+
+
+  .info-box {
+    width: 90vw;
+    padding: 5vw;
+  }
+
+  .info-label {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .info-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .info-content {
+    flex-direction: column; /* Force vertical stacking */
+    gap: 1.5rem;
+  }
+
+  .left-paragraph,
+  .right-paragraph {
+    width: 100%;       /* Full width on small screens */
+    min-width: 0;      /* Cancel any min-width */
+    padding-bottom: 0; /* No extra space between stacked items */
+  }
+
+  .back-button {
+    margin-left: 5vw;
+    margin-top: 2rem;
+  }
+
+  .back-button a {
+    font-size: 1rem;
+  }
+
+}

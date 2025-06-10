@@ -7,9 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="./HomePage/navbar.css" rel="stylesheet">
 
-  <title>Rooted in Nature</title>
+  <title>AgriLuntian</title>
   <link rel="stylesheet" href="HomePage/Homepage_css.css" />
   <link rel="stylesheet" href="./News/News_page.css">
   <link rel="stylesheet" href="./Footer/Footer_part.css">
@@ -31,8 +32,13 @@
     <nav class="nav-links">
         <div class="dropdown">
             <button class="dropdown-btn" aria-expanded="false">
-              FARMING
+            <a href="../Farm/Farm.html">FARMING</a>
+            <img src="./HomePage/dropdown.png" alt="" class="dropdown-icon">
             </button> 
+             <ul class="dropdown-menu">
+              <li><a href="./Farm/DrySeasonPage/Dryseason.html">Dry Season Crops</a></li>
+              <li><a href="./Farm/WetSeasonPage/Wetseason.html">Wet Season Crops</a></li>
+            </ul>
           </div>
 
           <div class="dropdown">
@@ -41,9 +47,9 @@
               <img src="./HomePage/dropdown.png" alt="" class="dropdown-icon">
             </button>
             <ul class="dropdown-menu">
-              <li><a href="#">Poultry Farming</a></li>
-              <li><a href="#">Piggery Farming</a></li>
-              <li><a href="#">Cattle Farming</a></li>
+              <li><a href="./Livestocks Poultry/poultry.html">Poultry Farming</a></li>
+              <li><a href="./Livestocks Piggery/piggery.html">Piggery Farming</a></li>
+              <li><a href="./Livestocks Cattle/cattle.html">Cattle Farming</a></li>
             </ul>
           </div>
 
@@ -53,8 +59,8 @@
               <img src="./HomePage/dropdown.png" alt="" class="dropdown-icon">
             </button>
             <ul class="dropdown-menu">
-              <li><a href="./LoanForm/LoanForm.html">Loans</a></li>
-              <li><a href="#">Partnerships</a></li>
+              <li><a href="./Application Form/LoanForm.html">Loans</a></li>
+              <li><a href="./Application Form/PurchaseForm.html">Purchase</a></li>
             </ul>
           </div>
 
@@ -66,7 +72,7 @@
   <main class="hero-section" id="start">
     <div class="hero-text">
       <h1>Rooted in Nature,<br>Growing for the Future</h1>
-      <p class = "subhero-text"> To empower sustainable Filipino Agriculture through innovation, tradition, and nature-rooted solutions.</p>
+      <p class = "subhero-text">To empower sustainable agriculture in Bulacan by blending innovation with local farming traditions and nature-rooted solutions that uplift the province’s farming communities.</p>
       <a href = "./Login_SignUp/SignUp.html" class = "get-started-button-link"><button class="get-started-button"> GET STARTED <span class="arrow-icon">❯</span></button></a>
     </div>
   </main>
@@ -76,38 +82,31 @@
       <h1> ABOUT US </h1>
       
         <p class = "about-us-p1">
-        <span style = "color: #AED22B; font-weight: 700;">AgriLuntian</span> combines “<b>Agri</b>,” meaning agriculture, 
-        with “<b>Luntian</b>,” the Filipino word for green,
-        symbolizing life, growth, and abundance. 
+        <span style = "color: #AED22B; font-weight: 700;">AgriLuntian</span> is an organization rooted in the fertile lands of Bulacan, 
+        combining “Agri” (agriculture) and “Luntian” (green) — a name that 
+        symbolizes growth, life, and sustainability. Inspired by the province’s rich 
+        farming heritage, AgriLuntian reflects the dedication of Bulakenyo 
+        farmers and their deep cultural connection to the land.
         </p>
         
         <p  class = "about-us-p2">
-        It reflects the fertile lands, thriving crops, and 
-        sustainable practices that define Philippine 
-        agriculture while also honoring the deep cultural 
-        connection between Filipino farmers and the land.  
-        The name represents not only productivity but also a 
-        commitment to eco-friendly farming, resilience, and 
-        the legacy of nurturing the environment for future 
-        generations. 
+        As both a digital platform, agricultural manufacturer, and distributor, 
+        AgriLuntian empowers Bulacan’s farming communities by providing 
+        easy access to real-time data, essential services, and localized 
+        agricultural knowledge. We bridge the gap between farmers and 
+        support institutions, while also processing, packaging, and distributing 
+        their crops and livestock — ensuring that high-quality agricultural 
+        products reach broader markets efficiently and sustainably.
         </p>
       </div>
 
       <div class = "container">
         <img src = "./HomePage/cattle.png" class = "cattle">
       <div class = "about-us-b2">
-        <p><b>What is AgriLuntian</b></p>
-        <p>
-        An all-in-one digital platform designed to support and 
-        empower farmers by giving them easy access to 
-        agricultural knowledge, real-time data, and essential 
-        services. It connects farmers to valuable resources, helping 
-        them make smarter decisions, improve productivity, and 
-        build stronger linkages with support institutions.
-        </p>
+         <h1 class = "AgriLuntian"><span>Agri<span style = "color: #AED22B; margin-right: 8vw;">Luntian</h1>
 		  </div>
 	  </div>
-      <h1 class = "AgriLuntian"><span>Agri<span style = "color: #AED22B">Luntian</h1>
+     
   </div>
   <!-- News Part -->
   <div class="hero" id="news_part">
@@ -186,11 +185,9 @@
   </div>
 </div>
 
-
-
       <h1 class="footer">In PH<br></h1>
       <h1 class="footer-son">Agriculture</h1>
-      <a href="#" class="more-news">→ Click here for more news</a>
+      <a href="./News/More_News.html" class="more-news">→ Click here for more news</a>
     </div>
   </div>
 <!--Start of Footer-->
@@ -238,6 +235,13 @@
   </div>
   </footer>
 <!--End of Footer-->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+
 
   <script src="./HomePage/dropdown.js"></script>
   <script>

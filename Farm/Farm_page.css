@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/*FARMING RESOURCE HUB*/
+.FarmHead {
+  height: 40vh;
+  width: 100%;
+}
+
+.Farming-Resource-Hub {
+  justify-content: flex-start;
+  margin-top: 3vh;
+  margin-bottom: 8vh;
+  line-height: 1.6;
+}
+
+.Farming-Resource-Hub h1 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 2.3rem;
+  color: #224844;
+}
+
+.Farming-Resource-Hub p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 0 10vw;
+  margin-bottom: 8vh;
+}
+
+.c1-link img {
+  height: 8vh;
+  width: 5vw;
+  margin-bottom: 10vh;
+}
+
+.content-1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.c1-link {
+  background-color: #224844;
+  border-radius: 10px;
+  padding: 1em;
+  width: 29%;
+  margin-right: 2vw;
+}
+
+.c1-link p{
+  font-family: "Unbounded", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5vh;
+}
+
+.c1-link, .c1-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.c1-link button {
+  font-family: "Poppins", sans-serif;
+  color: #224844;
+  background-color: white;
+  font-weight: 1000;
+  border-radius: 10px;
+  height: 4vh;
+  width: 8vw;
+  cursor: pointer;
+}
+
+.c1-link button:hover {
+  background-color: whitesmoke;
+  height: 4.2vh;
+  width: 8.2vw;
+}
+
+.c1-text {  
+  justify-content: flex-start;
+  width: 30%;
+  text-align: right;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  margin-left: auto;
+}
+
+.c1-text h2 {
+  font-family: "Unbounded", sans-serif;
+  color: #AED22B;
+  font-weight: 800;
+  font-size: 2.3rem;
+  margin-bottom: 2vh;
+}
+
+.c1-text p {
+  font-family: "Poppins", sans-serif;
+  color: #224844;
+  font-size: 1.15rem
+}
+
+/*LATEST-MARKET-MONITORING*/
+.Latest-Market-Monitoring{
+  display: flex;  
+  background-color: #224844;
+  padding-bottom: 5vh;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 10vw;
+}
+
+
+.content-2-pic, .content-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-2 {
+  height: 100%;
+  width: 50%;
+}
+
+.content-2 h2 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 2.3rem;
+  color: white;
+  margin-top: 5vh;
+}
+
+.content-2 p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+}
+
+.c2-p2 {
+  font-size: 0.94rem !important;
+  font-weight: 600 !important;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+
+.content-2-pic {
+  width: 42%;
+}
+
+.content-2 button {
+  border-radius: 10px;
+  background-color: white;
+  width: 12vw;
+}
+
+.content-2 button:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.content-2 button a p{
+  font-weight: 700;
+  text-decoration: none;
+  color: #224844;
+}
+
+.content-2 button a {
+  text-decoration: none;
+}
+
+.content-2-pic img {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+
+
+
+

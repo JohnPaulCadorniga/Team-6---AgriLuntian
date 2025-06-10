@@ -10,126 +10,16 @@
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
   }
-  
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255);
-    position: fixed;
-    top: 0;
-    width: calc(100% - 2rem);
-    z-index: 10;
-    border-radius: 2rem;
-    margin: 1rem;
-  }
-  
-  .logo img {
-    height: 32px;
-    max-width: 100%;
-  }
-  
-  .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #7CAF36;
-    cursor: pointer;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 12rem;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: none;
-    border: none;
-    font: inherit;
-    color: #7CAF36;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 0.5rem 0;
-  }
-  
-  .dropdown-icon {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.3s ease;
-  }
-  
-  .dropdown-menu {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
+
+  body {
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 100;
-  }
-  
-  .dropdown-menu a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #333;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  
-  .dropdown-menu a:hover {
-    background: #f5f5f5;
-  }
-  
-  /* Active state */
-  .dropdown.active .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  .dropdown.active .dropdown-icon {
-    transform: rotate(180deg);
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: #7CAF36;
-    font-weight: bold;
-  }
-  
-  .login-btn {
-    padding: 0.4rem 1.2rem;
-    border: none;
-    border-radius: 20px;
-    background-color: #B5D560;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
+    transition: opacity 1s ease-in-out;
   }
 
-  .login-btn a {
-    text-decoration: none;
-    color: inherit;
+  body.fade-in {
+    opacity: 1;
   }
-  
+   
   /* Hero Section */
   .hero-section {
     height: 100vh;
@@ -154,7 +44,7 @@
     font-family: "Unbounded",sans-serif;
     text-align: center;
     font-weight: 500;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: white;
     letter-spacing: 0.4vw;
   }
@@ -165,8 +55,9 @@
     text-align: center;
     margin-top: 2vh;
     margin-bottom: 6vh;
-    font-weight: 100;
-    font-size: 1.5rem;
+    font-weight: 300;
+    width: 75%;
+    font-size: 1rem;
   }
   
   .text-btn {
@@ -187,13 +78,13 @@
     background-color: #AED22B;
     color: white;
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0.5vh 0.5vw 0.5vh 1vw;
     font-size: 1.2rem;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    width: 20vw;
+    width: 15vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
     align-self: center;
@@ -220,13 +111,15 @@
 
   /*About Us*/
 .AgriLuntian {
-	font-size: 5rem;
+  margin-top: 16vh;
+  margin-left: 0;
+	font-size: 4rem;
   }
   
   h1 {
     font-family: "Unbounded",sans-serif;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #224844;
     margin-top: 0;
   }
@@ -236,16 +129,16 @@
 	 justify-content: space-between;
 	 align-items: flex-start;
 	 flex-wrap: wrap;
-	 padding: 5vw 1vw 5vw 5vw;
+	 padding: 5vw 1vw 5vw 9vw;
   }
   
   .about-us-b1 {
     font-family: "Unbounded",sans-serif;
     width: 42%;	
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1.1rem;
     color: #224844;
-    line-height: 2.2;
+    line-height: 1.6;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -257,15 +150,15 @@
     text-align: right;    
     align-items: flex-start;
     font-family: "Unbounded", sans-serif;
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1.1rem;
     color: #224844;
-    line-height: 2.2;
+    line-height: 1.6;
     margin-bottom: -10vh;
   }
   
   .about-us-p1 {
-    width: 95%;
+    width: 100%;
     text-align: left;
 	  margin-bottom: 8vh;
   }	
@@ -297,39 +190,10 @@
     line-height: 1.6;
   }
 
+
   /* Responsive Styles */
   
-  @media (max-width: 768px) {
-    .mobile-menu-btn {
-      display: block;
-    }
-    
-    .nav-links {
-      position: fixed;
-      top: 80px;
-      left: 1rem;
-      right: 1rem;
-      background: rgba(255, 255, 255, 0.95);
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 2rem;
-      border-radius: 1rem;
-      gap: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transform: translateY(-150%);
-      opacity: 0;
-    }
-    
-    .nav-links.active {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    
-    .login-btn {
-      width: 100%;
-      padding: 0.8rem;
-    }
-    
+  @media (max-width: 768px) {  
     .hero-section {
       padding: 0 2rem;
       justify-content: center;
@@ -404,13 +268,7 @@
 
   }
   
-  @media (max-width: 480px) {
-    .navbar {
-      border-radius: 1rem;
-      margin: 0.5rem;
-      width: calc(100% - 1rem);
-    }
-    
+  @media (max-width: 480px) {    
     .hero-text h1 {
       font-size: 1.8rem;
     }
@@ -443,13 +301,5 @@
     .get-started-button {
     font-size: 0.8rem;
     width: 100%; 
-  }
-
-    .arrow-icon {
-    transform:scale(0.8);    
-  }
-
-  .logo {
-    margin: 0 !important;
   }
 }
